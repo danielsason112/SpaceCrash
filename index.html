@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <title>A Multiplayer Game</title>
+  <style>
+    canvas {
+      width: 800px;
+      height: 600px;
+      border: 5px solid black;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="static/assets/css/style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+  <div class="knockout">SpaceCrash</div>
+  <div id="preload">
+    <p>Enter your name:</p>
+    <input id="nameInput" type="text" name="name" />
+    <div id="name-button" class="btn"><span>Go!</span></div>
+  </div>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="clouds"></div>
+  <div class="wrapper">
+    <canvas id="canvas"></canvas>
+    <div class="content-wrapper">
+      <div class="instructions">
+        <h3>Instructions:</h3>
+        <li>Use W, A, S, D key to move around.</li>
+        <img src="static/assets/images/wasp.png" width="100" />
+        <li>Avoid the incomming asteroids and planets.</li>
+        <li>Last man alive is the winner!</li>
+      </div>
+      <p id="waiting">Waiting for other players</p>
+      <div id="ready-button" class="btn"><span>Ready!</span></div>
+    </div>
+  </div>
+</body>
+<script src="/static/game.js"></script>
+
+</html>
